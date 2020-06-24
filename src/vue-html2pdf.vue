@@ -210,7 +210,8 @@ export default {
 				},
 
 				html2canvas: {
-					scale: this.pdfQuality
+					scale: this.pdfQuality,
+         			useCORS: true
 				},
 
 				jsPDF: {
