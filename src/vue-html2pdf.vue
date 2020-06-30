@@ -61,6 +61,11 @@ export default {
 			default: `${new Date().getTime()}`
 		},
 
+		margin: {
+			type: [Number, Array],
+			default: 0,
+		},
+
 		pdfQuality: {
 			type: Number,
 			default: 2,
@@ -200,7 +205,7 @@ export default {
 			
 
 			const opt = {
-				margin: 0,
+				margin: this.margin,
 
 				filename: `${this.filename}.pdf`,
 
@@ -215,7 +220,7 @@ export default {
 				},
 
 				jsPDF: {
-					unit: 'in',
+					unit: 'mm',
 					format: this.pdfFormat,
 					orientation: this.pdfOrientation
 				}
