@@ -223,7 +223,8 @@ export default {
 					unit: 'mm',
 					format: this.pdfFormat,
 					orientation: this.pdfOrientation
-				}
+				},
+        		pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
 			}
 
 			let pdfBlobUrl = await html2pdf().set(opt).from(element).output('bloburl')
